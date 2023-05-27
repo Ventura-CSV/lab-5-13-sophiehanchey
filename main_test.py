@@ -1,3 +1,4 @@
+import types
 import random
 import main
 
@@ -19,6 +20,16 @@ def test_main():
     assert cnteven == len(
         resultlst), "The number of even elements are incorrect"
 #     assert cnteven == 7, "The number of even elements are incorrect."
+
+
+def test_type_generator():
+    numbers = [random.randint(0, 100) for i in range(10)]
+    print('Original list', numbers)
+    evenlst = [v for v in numbers if v % 2 == 0]
+    cnteven = len(evenlst)
+
+    gen = main.findEvenNumber(numbers)
+    assert isinstance(gen, types.GeneratorType), 'Your Returned value is not a generator'
 
 
 def test_yield():

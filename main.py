@@ -5,6 +5,9 @@ def findEvenNumber(numbers):
     ##################################################
     # Make your code
     ##################################################
+    for v in numbers:
+        if not v % 2:
+            yield v
 
 
 def main():
