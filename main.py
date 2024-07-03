@@ -2,11 +2,12 @@ import random
 
 
 def findEvenNumber(numbers):
-    """
-    ########################################
-    Code Your Program here
-    ########################################
-    """
+    evenNums = []
+    for i in numbers:
+        if numbers[i] % 2 == 0:
+            evenNums.append(numbers[i])
+        
+    return evenNums
 
 
 def main():
