@@ -3,7 +3,7 @@ import random
 
 def findEvenNumber(numbers):
     evenNums = []
-    for i in numbers:
+    for i in range(len(numbers)):
         if numbers[i] % 2 == 0:
             evenNums.append(numbers[i])
         
