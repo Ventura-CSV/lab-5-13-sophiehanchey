@@ -2,13 +2,9 @@ import random
 
 
 def findEvenNumber(numbers):
-    evenNums = []
-    for i in range(len(numbers)):
-        if numbers[i] % 2 == 0:
-            evenNums.append(numbers[i])
-        
-    return evenNums
-
+    for n in numbers:
+        if n % 2 == 0:
+            yield n
 
 def main():
     numbers = [random.randint(0, 100) for i in range(10)]
